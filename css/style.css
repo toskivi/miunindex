@@ -1,37 +1,436 @@
+/* jag använde inte float på något ställe, då jag inte fann något behov av att använda det */
+
+/* globala inställningar */
 * {
-    margin     : 0;
-    padding    : 0;
-    box-sizing : border-box;
-    line-height: 1.5;
+    /* nollställer margin och padding */
+    margin : 0;
+    padding: 0;
+
+    /* ändrar sättet margins räknas på */
+    box-sizing: border-box;
+
+    /* byter font */
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body{
 
-}
-.page {
-    height: 100vh;
-}
-
-#first{
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    background:yellow;
-}
-#second{
-    position:
+html {
+    /* visar scrollbaren hela tiden, så sidan inte hoppar i sidleds */
+    overflow-y: scroll;
 }
 
-#header{
-    height:50px;
+body {
+
+    /* 100% av skärmen. Krävs för att footern ska fungera korrekt */
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image : url("../img/bgtree.png");
+    background-repeat: no-repeat;
+
+    /* flytta ned bakgrundsbilden längst ner till höger */
+    background-position: 100% 100%;
+
+    /* gör så att innehållet inte åker in bakom footern */
+    padding-bottom: 100px;
+
+
 }
-#navbar {
-    position: fixed; 
-    bottom: 0;
-    left:0;
-    right:0;
-    background: green;
+
+#body-container {
+    max-width: 1024px;
+    width    : 90%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+
+    /* centerar bodyn */
+    margin       : auto;
+    /* flyttar ner innehållet på sidan 1 em */
+    padding-top  : 1em;
+    padding-left : 2em;
+    padding-right: 2em;
+
+    /* förhindrar innehållet ifrån att åka in bakom footern */
+    padding-bottom: 1em;
+
+}
+
+main {
+    padding-bottom: 2em;
+}
+
+/* upp-knappen */
+#top-button {
+
+    /* låst position */
+    position: fixed;
+
+    /* position på sidan */
+    right: 1em;
+    top  : 90%;
+
+    height: 10px;
+
+    background: rgba(79, 192, 130, 0.9);
+    z-index   : 999;
+    padding   : .4em .8em 2em .8em;
+
+    /* rundade hörn */
+
+    border-radius  : 10%;
+    justify-content: center;
+}
+
+#top-button img {
+    width : 10px;
+    height: 10px;
+}
+
+header {
+    /* flyttar innehållet så det ligger bredvid varandra och flyttar isär innehållet */
+    display        : flex;
+    justify-content: space-between;
+
+    /* flyttar ner innehåller under headern */
+    margin-bottom: 2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+footer {
+    display        : flex;
+    justify-content: space-around;
+    position       : absolute;
+    bottom         : 0;
+    left           : 0;
+    right          : 0;
+    height         : 100px;
+    margin         : auto;
+
+    /* border ovanför footern */
+    border-top      : 2px solid rgba(79, 192, 130, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+#footer-content {
+    display        : flex;
+    justify-content: space-evenly;
+    max-width      : 1024px;
+    width          : 90%;
+
+    padding-top: 2em;
+}
+
+p {
+    margin-top   : 1em;
+    margin-bottom: 1em;
+    line-height  : 1.5;
+}
+
+header img {
+    width: 100px;
+}
+
+nav {
+    display    : flex;
+    align-items: center;
+}
+
+/* ändrar endast a-taggar i nav */
+nav a {
+    margin: 0.5em;
+}
+
+/* ändrar länkar när man har besökt en länk, har musen på en länk och klickar på en länk */
+a,
+a:visited,
+a:hover,
+a:active {
+    font-weight    : 500;
+    text-decoration: none;
+    color          : #222;
+    position       : relative;
+    z-index        : 1;
+}
+
+/* kod för den där gröna markeringen på alla länkarna */
+/* jag vill inte ha den på min header-logo */
+/* grundkod från evanyou.me */
+nav a:after,
+p a:after,
+#image-menu a:after,
+li a:after {
+    /* gröna-rektangeln innehåller ingen text (content) */
+    content : "";
+    position: absolute;
+
+    /* flyttar den längst bak */
+    z-index: -999;
+
+    /* hur mycket av länken ska täckas */
+    top: 65%;
+
+    /* rutan sticker ut lite på bägge sidor */
+    left : -0.2em;
+    right: -0.2em;
+
+    /*  */
+    bottom          : 0;
+    transition      : top 250ms;
+    background-color: rgba(79, 192, 130, 0.5);
+}
+
+p a:after {
+    left: -0.1em;
+}
+
+a:hover:after,
+#image-menu a:hover:after {
+    top: 0%;
+}
+
+/* index/nyhets-sidan */
+
+#quick-link {
+    display        : flex;
+    margin         : auto;
+    min-width      : 50%;
+    max-width      : 600px;
+    justify-content: space-around;
+    margin-bottom  : 1em;
+    background     : rgba(79, 192, 130, .5);
+    padding        : 1em;
+    border-radius  : 10px;
+    color          : white;
+    font-weight    : bold;
+
+}
+
+#quick-link a {
+    color: white;
+}
+
+#quick-link a:hover {
+    color: #ddd;
+}
+
+article img {
+    width : 200px;
+    height: 120px;
+
+    /* behåller aspect-ration vid ändrande av storlek */
+    object-fit: cover;
+
+}
+
+hr {
+    margin-top   : 2em;
+    margin-bottom: 3em;
+}
+
+article h2 {
+    margin-bottom: 1em;
+    text-align   : center;
+}
+
+h4 {
+    margin-top   : 0.5em;
+    margin-bottom: 0.5em;
+    /* mindre text, annan färg och annat typsnitt */
+    font-size    : 0.8rem;
+    color        : #999;
+    font-family  : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* courses-sidan */
+table {
+    margin: auto;
+
+    /* tabellen är 75% av bodyn */
+    width        : 75%;
+    margin-top   : 2em;
+    margin-bottom: 2em;
+
+    border-collapse: collapse;
+}
+
+/* varje jämn (varannan) rad blir lite mörkare */
+tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+/* pictures-sidorna */
+
+#image-main {
+    display: flex;
+}
+
+#image-menu {
+    width    : 20%;
+    min-width: 150px;
+    display  : flex;
+
+    /* flex går nedåt */
+    flex-direction: column;
+    align-items   : center;
+
+    /* flytta ner länkarna lite */
+    padding-top: 3%;
+}
+
+#image-menu a {
+    margin-top: 1em;
+
+}
+
+#image-container {
+    display        : flex;
+    justify-content: space-evenly;
+    flex-wrap      : wrap;
+}
+
+#image-container a {
+    display: flex;
+    width  : fit-content;
+    border : 2px solid black;
+    padding: 1em;
+    margin : 1em;
+}
+
+#image-container img {
+
+    width     : 220px;
+    object-fit: contain;
+}
+
+/* tredje td kommer ha centrerad text */
+td:nth-child(3) {
+    text-align: center;
+}
+
+
+/* about me-sidan */
+
+
+.about-me {
+    display: flex;
+}
+
+.column {
+    width: 67%;
+}
+
+#right {
+    width: 33%;
+}
+
+.about-me img {
+    width     : 100%;
+    object-fit: cover;
+}
+
+span {
+    font-weight: 100;
+}
+
+.column ul,
+.column li {
+    list-style-position: inside;
+    margin-top         : 1em;
+    line-height        : 1.5;
+}
+
+.column li {
+    list-style-position: inside;
+}
+
+.column p {
+    padding-right: 2em;
+}
+
+/* contact-sidan */
+
+fieldset {
+    margin       : auto;
+    margin-top   : 1em;
+    margin-bottom: 1em;
+    width        : 75%;
+}
+
+legend {
+    /* flyttar in texten lite mot mitten och uppåt */
+    margin-left   : 2%;
+    padding-bottom: 6px;
+}
+
+form {
+    display       : flex;
+    flex-direction: column;
+    width         : 50%;
+    margin        : auto;
+}
+
+#action-button {
+    margin: auto;
+}
+
+#boxes-and-buttons {
+    display: flex;
+    margin : auto;
+}
+
+input,
+select,
+textarea {
+    margin : 1em;
+    padding: 1em;
+}
+
+@media screen and (max-width:800px) {
+    #image-main {
+        display: block;
+    }
+
+    .top-h2 {
+        display: none;
+    }
+
+    #image-menu {
+        flex-direction : row;
+        width          : 100%;
+        justify-content: space-evenly;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #boxes-and-buttons {
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    #quick-link span {
+        display: none;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .column,
+    #right {
+        width : 100%;
+        margin: auto;
+    }
+
+    .column {
+        margin-bottom: 2em;
+    }
 
 }

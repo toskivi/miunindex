@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommi Ojaskivi</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ankare som används i "tillbaka upp"-knappen -->
+    <a id="top"></a>
+
+    <!-- Tillbaka till toppen knapp -->
+    <a href="#top" id="top-button"><img src="img/uparrow.png" alt=""></a>
+
+    <div id="body-container">
+        <header>
+            <a href="index.html"><img src="img/logo.png" alt="Logotyp"></a>
+            <nav>
+                <a href="courses.html">kurser</a>
+                <a href="pictures.html">bilder</a>
+                <a href="about.html">om mig</a>
+                <a href="contact.html">kontakt</a>
+            </nav>
+        </header>
+
+
+        <h2 class="top-h2">Kontakta<span> mig via formuläret</span></h2>
+
+
+        <fieldset>
+
+            <legend>Kontaktformulär</legend>
+
+            <form>
+                <input type="text" placeholder="Namn" required>
+                <input type="email" placeholder="din@mail.com" required>
+                <select name="jobb">
+                    <option>Webbutvecklare</option>
+                    <option>Webbdesigner</option>
+                    <option>Projektledare</option>
+                </select>
+
+                <div id="boxes-and-buttons">
+                    <div id="news-letter">
+                        <label>Nyhetsbrev:</label>
+                        <input type="checkbox" checked>
+                    </div>
+
+                    <div id="employment">
+                        <label>Anställd (Ja/Nej):</label>
+
+                        <input type="radio" name="anstalld" checked>
+
+                        <input type="radio" name="anstalld">
+                    </div>
+                </div>
+                <textarea style="resize: none;" placeholder="Meddelande [frivilligt]"></textarea>
+
+                <div id="action-button">
+                    <input type="submit" value="Skicka">
+                    <input type="reset" value="Nollställ">
+                </div>
+            </form>
+        </fieldset>
+
+
+        <footer>
+            <div id="footer-content">
+                <!-- & copy ; är en copyright symbol - (c), på HTML-språk -->
+                &copy; Tommi Ojasivi - 2020
+                <a href="mailto:tooj1800@student.miun.se">Mail me!</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

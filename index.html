@@ -1,31 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
+<!-- Head innehåller information som inte syns för användaren -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tommi Ojaskivi</title>
+
+    <!-- Favicon är den lilla bilden som syns i fliken -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- Länk till CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- Body innehåller allt användaren ser -->
+
 <body>
-    <div id="content">
 
+    <!-- ankare som används i "tillbaka upp"-knappen -->
+    <a id="top"></a>
 
-        <div id="first" class="page">Test</div>
-        <div id="header">
-            <div id="navbar">
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
+    <!-- Tillbaka till toppen knapp -->
+    <a href="#top" id="top-button"><img src="img/uparrow.png" alt=""></a>
+
+    <div id="body-container">
+
+        <!-- Header är högst upp på sidan -->
+        <header>
+
+            <!-- En logotyp som även är en länk -->
+            <a href="index.html"><img src="img/logo.png" alt="Logotyp"></a>
+
+            <!-- Navigationsmeny -->
+            <nav>
+                <a href="courses.html">kurser</a>
+                <a href="pictures.html">bilder</a>
+                <a href="about.html">om mig</a>
+                <a href="contact.html">kontakt</a>
+            </nav>
+        </header>
+
+        <!-- Main innehåller själva innehållet på en sida -->
+        <main>
+
+            <div id="quick-link">
+                <span>nuvarande kurser:</span>
+                <a href="dt057g">Webbutveckling I</a>
+                <a href="dt084g">Introduktion i JavaScript</a>
             </div>
-        </div>
-        <div id="second" class="page">Test</div>
+
+            <h2 class="top-h2"><span>Lär dig något</span> nytt</h2>
+
+            <!-- Article är en del av sidan -->
+            <article>
+
+                <!-- Lite mindre rubrik än h1 -->
+                <h2>Håll det simpelt</h2>
+
+                <!-- Länken ska öppnas i en ny flik -->
+                <a href="img/simple.jpg" target="_blank"><img src="img/simple.jpg"
+                        alt="Svartvit bild på ett stilrent hus"></a>
+
+                <!-- h4 är ännu mindre än h2 -->
+                <h4>10 sept 2020</h4>
+
+                <!-- Paragraf -->
+                <p>
+                    Det är lätt att se alla dessa komplicerade webbplatser med galna animationer, element som rör sig
+                    när du
+                    bläddrar och tro att din webbplats behöver det.
+                </p>
+                <p>Även om det kan vara trevligt, kom ihåg att din design inte är det viktigaste, den presenterar endast
+                    innehållet - du
+                    du vill inte sluta distrahera människor från innehållet med PowerPoint-liknande övergångar som
+                    flyger
+                    runt
+                    överallt.
+                </p>
+                <p>
+                    Är sidan simpel blir det lättare för dig att hålla den uppdaterad så innehållet alltid är färskt.
+
+                    <a href="https://www.bluleadz.com/blog/bid/96973/6-tips-for-beginner-level-web-designers"
+                        target="_blank">Källa</a>
+
+
+                    <!-- Skriver ut ett horisontellt streck för avdelning -->
+
+                </p>
+                <hr>
+            </article>
+
+            <!-- Exakt samma som ovan -->
+            <article>
+                <h2>Tänk på prestandan</h2>
+                <a href="img/js.png" target="_blank"><img src="img/js.png" alt="Skärmavbild av JavaScript-kod"></a>
+                <h4>7 sept 2020</h4>
+                <p>
+
+                    En enkel men ofta förbisedd del av att bygga en webbplats är att maximera sidans hastighet. Att ha
+                    en
+                    snabb
+                    webbplats ökar inte bara din sökposition (sidhastighet är en variabel som sökmotorer tittar på),
+                    utan
+                    det
+                    kan
+                    förbättra din besökstatistik. Dina besökare vill inte vänta på ditt innehåll och kommer att lämna om
+                    det
+                    tar
+                    för lång tid att ladda.
+
+                </p>
+                <p> Börja med att se till att dina bilder har en lämplig upplösning och komprimera dem för att
+                    ytterligare
+                    minska
+                    deras storlek.
+
+                    Var också uppmärksam på hur många bilder du har - det spelar ingen roll hur optimerade de är om du
+                    bombarderar din besökare med 600 serverförfrågningar.
+
+                    Håll dina tredjepartsbibliotek till ett minimum och slå ihop dem alla för att minska antalet
+                    förfrågningar.
+                    Samma sak gäller även typsnitt; försök bara ladda de tjocklekar och stilar du faktiskt behöver.
+
+                    <a href="https://www.bluleadz.com/blog/bid/96973/6-tips-for-beginner-level-web-designers"
+                        target="_blank">Källa</a>
+                </p>
+
+                <hr>
+            </article>
+            <article>
+                <h2>ReactJS</h2>
+                <a href="img/react.png" target="_blank"><img src="img/react.png"
+                        alt="ReactJS's logotyp, som ser ut som en atom"></a>
+                <h4>4 sept 2020</h4>
+                <p>
+
+
+                    React gör det smärtfritt att skapa interaktiva användargränssnitt. Designa enkla vyer för varje
+                    tillstånd i
+                    din applikation, och React uppdaterar effektivt och ger precis rätt komponenter när din data ändras.
+
+                    Deklarativa vyer gör din kod mer förutsägbar och lättare att felsöka.
+                    <br><br>
+                    <b>Komponentbaserad</b><br>
+                    Bygg inkapslade komponenter som hanterar sitt eget tillstånd och sedan komponera dem för att skapa
+                    komplexa
+                    användargränssnitt.
+
+                    Eftersom komponentlogik är skriven i JavaScript istället för mallar kan du enkelt skicka rik data
+                    genom
+                    din
+                    app och hålla tillståndet utanför DOM.
+
+                    <br><br>
+                    <b>Lär dig en gång, skriv var som helst</b><br>
+                    Vi gör inte antaganden om resten av din teknikstack, så du kan utveckla nya funktioner i React utan
+                    att
+                    skriva om befintlig kod.
+
+                    React kan också renderas på servern med Node och driva mobilappar med React Native.
+
+                    <a href="https://reactJS.org" target="_blank">Källa</a></p>
+                <hr>
+            </article>
+        </main>
+
+        <!-- Footer har man längst ner på en sida -->
+        <footer>
+            <div id="footer-content">
+                <!-- & copy ; är en copyright symbol - (c), på HTML-språk -->
+                &copy; Tommi Ojasivi - 2020<br>
+                <a href="mailto:tooj1800@student.miun.se">Mail me!</a>
+            </div>
+        </footer>
     </div>
-
-
 </body>
 
 </html>

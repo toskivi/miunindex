@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+
+<!-- Allt som är likadant är kommenterat i index.html -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommi Ojaskivi</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ankare som används i "tillbaka upp"-knappen -->
+    <a id="top"></a>
+
+    <!-- Tillbaka till toppen knapp -->
+    <a href="#top" id="top-button"><img src="img/uparrow.png" alt=""></a>
+
+    <div id="body-container">
+
+        <header>
+            <a href="index.html"><img src="img/logo.png" alt="Logotyp"></a>
+            <nav>
+                <a href="courses.html">kurser</a>
+                <a href="pictures.html">bilder</a>
+                <a href="about.html">om mig</a>
+                <a href="contact.html">kontakt</a>
+            </nav>
+        </header>
+
+
+        <main>
+
+
+            <h2 class="top-h2"><span>Dessa</span> kurser <span>kommer jag att läsa</span></h2>
+
+
+            <!-- En tabell för att presentera data -->
+            <table>
+                <thead>
+                    <!-- tr är table-row, alltså en rad -->
+                    <tr>
+                        <!-- Rubrik för kolumner -->
+                        <th>Kurskod</th>
+                        <th>Kursnamn</th>
+                        <th>Progression</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                            <!-- Data till tabellen -->
+                            <td>DT057G</td>
+                            <td>Webbutveckling I</td>
+                            <td>A</td>
+                        </a>
+                    </tr>
+                    <tr>
+                        <td>DT084G</td>
+                        <td>Introduktion till programmering med JavaScript</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>DT163G</td>
+                        <td>Digital bildbehandling för webb</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>GD008G </td>
+                        <td>Typografi och form för webb</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>DT003G </td>
+                        <td>Databaser</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>DT093G </td>
+                        <td>Webbutveckling II</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>DT162G </td>
+                        <td>JavaScript-baserad webbutveckling</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>DT152G </td>
+                        <td>Webbdesign för CMS</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+
+                        <!-- colspan="3" gör kolumnens bredd till 3 -->
+                        <td colspan="3">Läsår 1</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Course code</th>
+                        <th>Course name</th>
+                        <th>Progression</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>DT173G </td>
+                        <td>Webbutveckling III </td>
+                        <td> B</td>
+                    </tr>
+                    <tr>
+                        <td>IK060G </td>
+                        <td>Projektledning</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>DT068G </td>
+                        <td>Webbanvändbarhet </td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td> DT071G </td>
+                        <td>Programmering I C#.net</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td> DT102G </td>
+                        <td>ASP.net med C# </td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td> IG021G </td>
+                        <td> Affärsplaner och kommersialisering</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td> DT140G </td>
+                        <td>Självständigt arbete</td>
+                        <td>B</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Läsår 2</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </main>
+
+        <footer>
+            <div id="footer-content">
+                <!-- & copy ; är en copyright symbol - (c), på HTML-språk -->
+                &copy; Tommi Ojasivi - 2020
+                <a href="mailto:tooj1800@student.miun.se">Mail me!</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
